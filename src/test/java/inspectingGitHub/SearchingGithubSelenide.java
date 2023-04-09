@@ -27,5 +27,18 @@ public class SearchingGithubSelenide {
         $("div#wiki-pages-box ul").$(byText("SoftAssertions")).click();
         $("div#wiki-body a#user-content-3-using-junit5-extend-test-class")
                 .parent().shouldHave(text("Using JUnit5"));
+//если нужно весь текст примера кода проверить
+        $("div#wiki-body").shouldHave(text("@ExtendWith" +
+                "({SoftAssertsExtension.class})\n" +
+                "class Tests {\n" +
+                "  @Test\n" +
+                "  void test() {\n" +
+                "    Configuration.assertionMode = SOFT;\n" +
+                "    open(\"page.html\");\n" +
+                "\n" +
+                "    $(\"#first\").should(visible).click();\n" +
+                "    $(\"#second\").should(visible).click();\n" +
+                "  }\n" +
+                "}"));
     }
 }
