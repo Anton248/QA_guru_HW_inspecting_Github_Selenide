@@ -19,6 +19,7 @@ public class SearchingGithubSelenide {
 
 //Перейти в раздел Wiki проекта
         $("a#wiki-tab").click();
+
 //В списке страниц (Pages) есть страница SoftAssertions
         $("div#wiki-pages-box input#wiki-pages-filter").setValue("soft");
         $("div#wiki-pages-box ul").shouldHave(text("SoftAssertions"));
