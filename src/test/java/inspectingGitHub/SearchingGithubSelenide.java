@@ -12,7 +12,7 @@ public class SearchingGithubSelenide {
 
     @Test
     void searchingSelenideJUnit5() {
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
 
 //Открыть страницу Selenide в Github
         open("https://github.com/selenide/selenide");
