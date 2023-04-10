@@ -1,4 +1,4 @@
-package inspectingGitHub;
+package inspecting_git_hub;
 
 import org.junit.jupiter.api.Test;
 
